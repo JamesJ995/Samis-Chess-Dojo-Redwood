@@ -5,7 +5,11 @@ const AboutPage = () => {
     <>
       <Metadata title="About" description="About page" />
 
-      <p>This is my tutorial redwoodJS Blog, ~LotR quote here~</p>
+      <p>
+        This is a sign up page to opt in for chess text messages sent using
+        Twilio. I plan on pushing daily chess puzzles and chess rating delta
+        updates.
+      </p>
     </>
   )
 }

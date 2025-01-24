@@ -15,9 +15,11 @@
     "@redwoodjs/forms": "8.4.4",
     "@redwoodjs/router": "8.4.4",
     "@redwoodjs/web": "8.4.4",
+    "chess.js": "^1.0.0",
     "humanize-string": "2.1.0",
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "18.3.1",
+    "react-fen-chess-board": "^2.0.6"
   },
   "devDependencies": {
     "@redwoodjs/vite": "8.4.4",

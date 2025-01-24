@@ -48,6 +48,10 @@ const ContactPage = () => {
   }
   return (
     <>
+      <p>
+        The 'contact me' messages sent here will only be saved to the site,
+        which I will check perodiocally, thanks!
+      </p>
       <Metadata title="Contact" description="Contact page" />
 
       <Toaster />
