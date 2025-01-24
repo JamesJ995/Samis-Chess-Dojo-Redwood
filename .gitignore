@@ -5,7 +5,6 @@
 !.env.defaults
 .netlify
 .redwood/*
-!.redwood/README.md
 dev.db*
 dist
 dist-babel
