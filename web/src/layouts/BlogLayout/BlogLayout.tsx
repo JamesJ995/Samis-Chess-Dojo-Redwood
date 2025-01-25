@@ -14,7 +14,7 @@ const BlogLayout = ({ children }: BlogLayoutProps) => {
       <header>
         <div className="flex-between">
           <h1>
-            <Link to={routes.home()}>James Blog</Link>
+            <Link to={routes.home()}>Sami's Chess Dojo</Link>
           </h1>
           {isAuthenticated ? (
             <div>
@@ -34,6 +34,9 @@ const BlogLayout = ({ children }: BlogLayoutProps) => {
             </li>
             <li>
               <Link to={routes.contact()}>Contact</Link>
+            </li>
+            <li>
+              <Link to={routes.textMessages()}>Sign Up For Messages</Link>
             </li>
           </ul>
         </nav>
