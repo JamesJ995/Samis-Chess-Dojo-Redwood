@@ -35,11 +35,9 @@ export const Success = ({
 }: CellSuccessProps<CommentsQuery, CommentsQueryVariables>) => {
   return (
     <>
-      <div className="space-y-8">
-        {comments.map((comment) => (
-          <Comment comment={comment} key={comment.id} />
-        ))}
-      </div>
+      {comments.map((comment) => (
+        <Comment key={comment.id} comment={comment} />
+      ))}
     </>
   )
 }

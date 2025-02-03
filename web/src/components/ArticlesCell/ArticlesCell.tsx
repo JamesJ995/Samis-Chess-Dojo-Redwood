@@ -1,44 +1,34 @@
-import type { ArticlesQuery, ArticlesQueryVariables } from 'types/graphql'
+import type { ArticlesQuery } from 'types/graphql'
 
-import { Link, routes } from '@redwoodjs/router'
-import type {
-  CellSuccessProps,
-  CellFailureProps,
-  TypedDocumentNode,
-} from '@redwoodjs/web'
+import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
 import Article from 'src/components/Article'
 
-export const QUERY: TypedDocumentNode<ArticlesQuery, ArticlesQueryVariables> =
-  gql`
-    query ArticlesQuery {
-      articles: posts {
-        id
-        title
-        body
-        createdAt
-      }
+export const QUERY = gql`
+  query ArticlesQuery {
+    articles: posts {
+      id
+      title
+      body
+      createdAt
     }
-  `
+  }
+`
 
 export const Loading = () => <div>Loading...</div>
 
 export const Empty = () => <div>Empty</div>
 
-export const Failure = ({
-  error,
-}: CellFailureProps<ArticlesQueryVariables>) => (
-  <div style={{ color: 'red' }}>Error: {error?.message}</div>
+export const Failure = ({ error }: CellFailureProps) => (
+  <div>Error: {error.message}</div>
 )
 
-export const Success = ({
-  articles,
-}: CellSuccessProps<ArticlesQuery, ArticlesQueryVariables>) => {
+export const Success = ({ articles }: CellSuccessProps<ArticlesQuery>) => {
   return (
-    <>
+    <div className="space-y-10">
       {articles.map((article) => (
-        <Article key={article.id} article={article} />
+        <Article article={article} key={article.id} summary={true} />
       ))}
-    </>
+    </div>
   )
 }
